@@ -1,2 +1,4 @@
-# machine_learning_tutorials
+# Machine Learning Tutorials
+
 A collection of machine learning tutorials
+
