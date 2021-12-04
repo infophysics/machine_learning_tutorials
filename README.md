@@ -3,14 +3,18 @@
 A collection of machine learning tutorials in python.
 
 ### Installation
-
+----------------
 In order to utilize the jupyter notebooks in this package, we recommend installing the IDE VS code (visual studio code), which can be integrated with anaconda environments and also contains it's own jupyter interface rather than having to use the browser.  You can also connect to remote environments, which makes integrating jupyter notebooks with remote sessions seamless.  You can download VS code [here](https://code.visualstudio.com/download).
 
 For the tutorials you will need to install the following basic packages:
 1. Anaconda ([individual edition](https://www.anaconda.com/products/individual)).
 2. NumPy ([latest version](https://numpy.org/)) - `conda install numpy`.
 3. SciPy ([latest version](https://scipy.org/)) - `conda install scipy`.
-4. PyTorch ([latest version](https://pytorch.org/)) - `conda install pytorch`.
+4. Matplotlib ([latest version](https://matplotlib.org/)) - `conda install matplotlib`.
+5. Pandas ([latest version](https://pandas.pydata.org/)) - `conda install pandas`.
+6. Scikit-learn (with parallel processing) ([latest version](https://scikit-learn.org/stable/index.html)) - `conda install scikit-learn scikit-learn-intelex`.
+7. Jupyter ([latest version](https://jupyter.org/)) - `conda install jupyter`.
+8. PyTorch ([latest version](https://pytorch.org/)) - `conda install -c pytorch`.
 
 #### Anaconda
 To install anaconda on Linux, you can download the shell installer [here](https://www.anaconda.com/products/individual), or issue the following from a shell
@@ -28,15 +32,30 @@ and then run the installer,
 ##### Creating a custom anaconda environment
 The installer will ask you to read through and accept a license, and will then prompt you for an installation directory (by default it will install in ~/anaconda3).  Once it's installed, you can create custom anaconda environments by issuing the command
 ```bash
-conda create -n <name> python=<python_version>
+conda create -n "name" python="python_version"
 ```
-where <name> is the name you want to give to your environment and <python_version> is the python version you want to install, typically 3.7 or 3.8 (3.9 is currently the bleeding edge which may not be compatible with some packages).  For the tutorials it could be helpful to make a custom environment with python version 3.8,
+where *name* is the name you want to give to your environment and *python_version* is the python version you want to install, typically 3.7 or 3.8 (3.9 is currently the bleeding edge which may not be compatible with some packages).  For the tutorials it could be helpful to make a custom environment with python version 3.8:
 ```bash
 conda create -n ml_tutorials python=3.8
 ```
 ##### Loading your custom environment
-
+To load the environment you just created, issue the command
+```bash
+conda activate ml_tutorials
+```
+You can see which packages are active by issuing:
+```bash
+conda list -n ml_tutorials
+```
+For more on managing anaconda environments, see the docs [here](https://docs.conda.io/projects/conda/en/latest/index.html) and the [tutorials](https://docs.anaconda.com/anaconda/navigator/tutorials/index.html).
 #### Python packages
-Once you have anaconda installed, 
-
+--------------------
+Once you are in an anaconda environment, you can install packages such as NumPy using the command
+```bash
+conda install numpy
+```
+which will collect a set of prerequisite packages that also need to be installed alongside numpy.  The installer will prompt you to agree to any packages before it installs them.  Not all python packages can be found by the conda installer, and so you may have to resort to using [pip](https://pypi.org/project/pip/).  Several packages can be installed at once
+```bash
+conda install -c numpy scipy matplotlib pandas scikit-learn scikit-learn-intelex jupyter pytorch
+```
 
