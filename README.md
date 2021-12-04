@@ -4,7 +4,7 @@ A collection of machine learning tutorials in python.
 
 ### Installation
 ----------------
-In order to utilize the jupyter notebooks in this package, we recommend installing the IDE VS code (visual studio code), which can be integrated with anaconda environments and also contains it's own jupyter interface rather than having to use the browser.  You can also connect to remote environments, which makes integrating jupyter notebooks with remote sessions seamless.  You can download VS code [here](https://code.visualstudio.com/download).
+In order to utilize the jupyter notebooks in this package, we recommend installing the IDE VS code (visual studio code), which can be integrated with anaconda environments and also contains it's own jupyter interface rather than having to use the browser.  You can also connect to remote environments, which makes integrating jupyter notebooks with remote sessions seamless.  You can download **VS code** [here](https://code.visualstudio.com/download).
 
 For the tutorials you will need to install the following basic packages:
 1. Anaconda ([individual edition](https://www.anaconda.com/products/individual)).
@@ -16,7 +16,7 @@ For the tutorials you will need to install the following basic packages:
 7. Jupyter ([latest version](https://jupyter.org/)) - `conda install jupyter`.
 8. PyTorch ([latest version](https://pytorch.org/)) - `conda install -c pytorch`.
 
-For information on how to use anaconda from within jupyter see [this page](https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/).
+For information on how to use **anaconda from within jupyter** see [this page](https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/).
 
 #### Anaconda
 To install anaconda on Linux, you can download the shell installer [here](https://www.anaconda.com/products/individual), or issue the following from a shell
