@@ -19,6 +19,7 @@ For the tutorials you will need to install the following basic packages:
 For information on how to use **anaconda from within jupyter** see [this page](https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/).
 
 #### Anaconda
+-------------
 To install anaconda on Linux, you can download the shell installer [here](https://www.anaconda.com/products/individual), or issue the following from a shell
 ```bash
 wget -O - https://www.anaconda.com/distribution/ 2>/dev/null | sed -ne 's@.*\(https:\/\/repo\.anaconda\.com\/archive\/Anaconda3-.*-Linux-x86_64\.sh\)\">64-Bit (x86) Installer.*@\1@p' | xargs wget
@@ -50,6 +51,7 @@ You can see which packages are active by issuing:
 conda list -n ml_tutorials
 ```
 For more on managing anaconda environments, see the docs [here](https://docs.conda.io/projects/conda/en/latest/index.html) and the [tutorials](https://docs.anaconda.com/anaconda/navigator/tutorials/index.html).
+
 #### Python packages
 --------------------
 Once you are in an anaconda environment, you can install packages such as NumPy using the command
@@ -59,9 +61,10 @@ conda install numpy
 which will collect a set of prerequisite packages that also need to be installed alongside numpy.  The installer will prompt you to agree to any packages before it installs them.  Not all python packages can be found by the conda installer, and so you may have to resort to using [pip](https://pypi.org/project/pip/).  Several packages can be installed at once
 ```bash
 conda install -c numpy scipy matplotlib pandas scikit-learn scikit-learn-intelex jupyter pytorch
+
 ```
-#### Jupyter and VS Code
-------------------------
+#### Jupyter
+------------
 Once jupyter is installed, you'll want to create a kernel which is associated to your anaconda environment that can be used within jupyter notebooks.  To do this, simply issue the command (assuming the preferred anaconda environment is active)
 ```bash
 python -m ipykernel install --user --name "anaconda_environment" --display-name "Python (anaconda_environment)"
@@ -70,3 +73,19 @@ where *anaconda_environment* is the name of the environment you want to create a
 ```bash
 python -m ipykernel install --user --name ml_tutorials --display-name "Python (ML tutorials)"
 ```
+Once inside of a jupyter notebook, you can check to see which kernel is currently being used by issuing
+```python
+import os
+print(os.environ['CONDA_DEFAULT_ENV'])
+```
+which will print the name of the anaconda environment.
+
+#### VS Code
+------------
+VS Code is extremely useful since it can easily integrate with jupyter and anaconda environments, as well as any remote ssh environments where you want to do your development.  To configure ssh with VS Code, see [this link](https://code.visualstudio.com/docs/remote/ssh).  
+
+To configure jupyter, first download the standard python extension for VS Code by typing ```Ctrl+Shift+P``` which will bring up a search window where you can type commands or search for things within the IDE.  Type ```Extensions: Install Extensions``` and select the option once it becomes available.  This will bring up a side bar that includes a search window.  Type ```ms-python.python``` in the search window and install the result.
+
+Once the python extension is installed, you should be able to select the interpreter by doing ```Ctrl+Shift+P``` and typing ```Python: Select Interpreter```.  This will bring up a list (hopefully) of python kernels including any anaconda environments.  Selecting the environment you created will allow you to run python scripts from VS Code which use that environment.
+
+For more on using jupyter with VS Code see [this link](https://code.visualstudio.com/docs/datascience/jupyter-notebooks).
