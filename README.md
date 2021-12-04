@@ -12,4 +12,10 @@ For the tutorials you will need to install the following basic packages:
 3. SciPy ([latest version](https://scipy.org/)) - `conda install scipy`.
 4. PyTorch ([latest version](https://pytorch.org/)) - `conda install pytorch`.
 
+#### Anaconda
+To install anaconda on Linux, you can download the shell installer [here](https://www.anaconda.com/products/individual), or issue the following from a shell
+```shell
+wget -O - https://www.anaconda.com/distribution/ 2>/dev/null | sed -ne 's@.*\(https:\/\/repo\.anaconda\.com\/archive\/Anaconda3-.*-Linux-x86_64\.sh\)\">64-Bit (x86) Installer.*@\1@p' | xargs wget
+```
+
 
