@@ -16,6 +16,8 @@ For the tutorials you will need to install the following basic packages:
 7. Jupyter ([latest version](https://jupyter.org/)) - `conda install jupyter`.
 8. PyTorch ([latest version](https://pytorch.org/)) - `conda install -c pytorch`.
 
+For information on how to use anaconda from within jupyter see [this page](https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/).
+
 #### Anaconda
 To install anaconda on Linux, you can download the shell installer [here](https://www.anaconda.com/products/individual), or issue the following from a shell
 ```bash
@@ -58,4 +60,13 @@ which will collect a set of prerequisite packages that also need to be installed
 ```bash
 conda install -c numpy scipy matplotlib pandas scikit-learn scikit-learn-intelex jupyter pytorch
 ```
-
+#### Jupyter and VS Code
+------------------------
+Once jupyter is installed, you'll want to create a kernel which is associated to your anaconda environment that can be used within jupyter notebooks.  To do this, simply issue the command (assuming the preferred anaconda environment is active)
+```bash
+python -m ipykernel install --user --name "anaconda_environment" --display-name "Python (anaconda_environment)"
+```
+where *anaconda_environment* is the name of the environment you want to create a kernel for and "Python (anaconda_environment)" is the given display name.  Assuming you used "ml_tutorials" for your environment, the command would be
+```bash
+python -m ipykernel install --user --name ml_tutorials --display-name "Python (ML tutorials)"
+```
