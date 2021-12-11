@@ -6,6 +6,11 @@ A collection of machine learning tutorials in python.
 ----------------
 In order to utilize the jupyter notebooks in this package, we recommend installing the IDE VS code (visual studio code), which can be integrated with anaconda environments and also contains it's own jupyter interface rather than having to use the browser.  You can also connect to remote environments, which makes integrating jupyter notebooks with remote sessions seamless.  You can download **VS code** [here](https://code.visualstudio.com/download).
 
+#### Packages
+-------------
+# <a href="https://numpy.org/"><img alt="NumPy" src="/branding/logo/primary/numpylogo.svg" height="60"></a>
+![JAX](https://raw.githubusercontent.com/google/jax/main/images/jax_logo_250px.png)
+
 For the tutorials you will need to install the following basic packages:
 1. Anaconda ([individual edition](https://www.anaconda.com/products/individual)).
 2. NumPy ([latest version](https://numpy.org/)) - `conda install numpy`.
