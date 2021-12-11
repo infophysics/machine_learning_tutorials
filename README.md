@@ -15,6 +15,7 @@ For the tutorials you will need to install the following basic packages:
 6. Scikit-learn (with parallel processing) ([latest version](https://scikit-learn.org/stable/index.html)) - `conda install scikit-learn scikit-learn-intelex`.
 7. Jupyter ([latest version](https://jupyter.org/)) - `conda install jupyter`.
 8. PyTorch ([latest version](https://pytorch.org/)) - `conda install -c pytorch`.
+9. JAX ([latest version](https://github.com/google/jax)) - `pip install jax && pip install jaxlib`.
 
 For information on how to use **anaconda from within jupyter** see [this page](https://jakevdp.github.io/blog/2017/12/05/installing-python-packages-from-jupyter/).
 
