@@ -1,1 +1,3 @@
 *.pyc
+alex_net/data/
+*.ipynb
