@@ -3,6 +3,18 @@ import numpy as np
 import scipy as sp
 from matplotlib import pyplot as plt
 from sklearn import svm
+from itertools import cycle, islice
+
+
+def get_example_values(x,y):
+    """
+    Get unique label values and return first instance
+    in a data set of each.
+    """
+    labels, index = np.unique(y, return_index=True)
+    xx = x[index, 0]
+    yy = x[index, 1]
+    return xx, yy
 
 """
 2D example datasets
@@ -146,3 +158,47 @@ def plot_simple_network_results(
     plt.legend( loc='upper right' )
     plt.title( 'Network Signal and Background' )
     plt.show()
+
+def plot_2d_classification(
+    x,  # values
+    y,  # labels
+    title:  str='Classification Example',
+    names:  list=[''],
+):
+    """
+    Function for plotting 2d classification data sets
+    where x is an array of (x,y) values and y is the class labels.
+    """
+    fig, axs = plt.subplots(figsize=(10,8))
+    colors = np.array(
+        list(
+            islice(
+                cycle(
+                    [
+                        "#377eb8",
+                        "#ff7f00",
+                        "#4daf4a",
+                        "#f781bf",
+                        "#a65628",
+                        "#984ea3",
+                        "#999999",
+                        "#e41a1c",
+                        "#dede00",
+                    ]
+                ),
+                int(max(y) + 1),
+            )
+        )
+    )
+    axs.scatter(x[:, 0], x[:, 1], s=10, color=colors[y])
+    axs.set_xlabel("x")
+    axs.set_ylabel("y")
+    axs.set_title(title)
+    if names[0] != '':
+        xx, yy = get_example_values(x,y)
+        for i, name in enumerate(names):
+            axs.scatter(xx[i],yy[i],s=10,color=colors[i],label=name)
+        plt.legend()
+    plt.tight_layout()
+    plt.show()
+
