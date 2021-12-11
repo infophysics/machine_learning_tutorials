@@ -8,7 +8,7 @@ In order to utilize the jupyter notebooks in this package, we recommend installi
 
 #### Packages
 -------------
-# <a href="https://numpy.org/"><img alt="NumPy" src="/branding/logo/primary/numpylogo.svg" height="60"></a>
+![PyTorch Logo](https://github.com/pytorch/pytorch/blob/master/docs/source/_static/img/pytorch-logo-dark.png)
 ![JAX](https://raw.githubusercontent.com/google/jax/main/images/jax_logo_250px.png)
 
 For the tutorials you will need to install the following basic packages:
